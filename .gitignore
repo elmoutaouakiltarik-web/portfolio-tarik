@@ -1,4 +1,9 @@
 node_modules/
-.py
+*.py
 *.txt
 nul
+_archive/
+reference/
+*.log
+.claude/
+.playwright-mcp/
