@@ -1,0 +1,50 @@
+<section id="lab">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="section-title-frame">
+            <div class="section-kicker">08 — Lab</div>
+            <h2 data-split>Esperimenti che nutrono le piattaforme</h2>
+          </div>
+          <p>Scratch profondi tenuti vivi sul banco di lavoro: ognuno è il seme di un modulo production-ready.</p>
+        </div>
+
+        <div class="lab-grid">
+          <article class="lab-card reveal">
+            <span class="lab-tag">CFD · PINN</span>
+            <h4>Lid-driven cavity — reinforcement PINN</h4>
+            <p>PINN con curriculum sul numero di Reynolds: stabile da Re 100 a Re 10000, con loss physics-driven e boundary conditioning soft.</p>
+            <div class="lab-stack"><span>FNO</span><span>DeepXDE</span><span>PyTorch</span></div>
+          </article>
+          <article class="lab-card reveal reveal-d1">
+            <span class="lab-tag">Agentic · CAD</span>
+            <h4>Text-to-STEP con build123d</h4>
+            <p>Prompt naturale → codice build123d → file STEP esportabile. Verifica geometrica e Z3 sui vincoli dimensionali prima del release.</p>
+            <div class="lab-stack"><span>build123d</span><span>Z3</span><span>STEP</span><span>Ollama</span></div>
+          </article>
+          <article class="lab-card reveal reveal-d2">
+            <span class="lab-tag">RAG · Knowledge</span>
+            <h4>Hybrid RAG su vault meccatronico</h4>
+            <p>Graphify knowledge graph + LanceDB ibrido (BM25 + vettoriale) su 17.5K nodi wiki: query in linguaggio naturale su codice, progetti e manuali.</p>
+            <div class="lab-stack"><span>Graphify</span><span>LanceDB</span><span>BM25</span><span>MCP</span></div>
+          </article>
+          <article class="lab-card reveal">
+            <span class="lab-tag">OT · Cyber</span>
+            <h4>OT honeypot su ISA 62443</h4>
+            <p>Segmentazione di rete, monitoring Modbus/OPC-UA e detection anomalie su traffico OT. Demonstrator di cyber security OT formato laboratorio.</p>
+            <div class="lab-stack"><span>ISA 62443</span><span>Modbus</span><span>Suricata</span></div>
+          </article>
+          <article class="lab-card reveal reveal-d1">
+            <span class="lab-tag">RL · Control</span>
+            <h4>Controllo RL di un drone CFD-aware</h4>
+            <p>PPO su ambiente con surrogate CFD come dynamics: training offline, deploy leggero, validazione contro solver ad alta fedeltà.</p>
+            <div class="lab-stack"><span>PPO</span><span>Stable-Baselines3</span><span>WebGL</span></div>
+          </article>
+          <article class="lab-card reveal reveal-d2">
+            <span class="lab-tag">Vision · Inspection</span>
+            <h4>Defect detection GPU edge</h4>
+            <p>YOLO distillato su Jetson Orin per ispezione visiva in linea, con quantizzazione INT8 e active learning su scarti rari.</p>
+            <div class="lab-stack"><span>YOLO</span><span>TensorRT</span><span>Jetson</span></div>
+          </article>
+        </div>
+      </div>
+    </section>

@@ -1,0 +1,76 @@
+# Wiki Capabilities Structured Summary
+
+## Skills trovate (27)
+- Skill - AI Agent Engineering
+- Skill - AI Code Quality Gate
+- Skill - Agent Orchestration
+- Skill - Architecture Engineering
+- Skill - Automation DevOps
+- Skill - Deep Learning Engineering
+- Skill - Engineering Maturity Governance
+- Skill - Industrial Robotics
+- Skill - Knowledge Graph Engineering
+- Skill - Long Session Coding Productivity
+- Skill - ML DL Automation Pipeline
+- Skill - MLOps Production
+- Skill - Machine Learning Engineering
+- Skill - Machine Learning and Deep Learning
+- Skill - OT Cybersecurity
+- Skill - PLC Programming
+- Skill - Product Business Profitability
+- Skill - Programmazione Professionale
+- Skill - QA Test Engineering
+- Skill - SLO Error Budget Engineering
+- Skill - SRE Observability
+- Skill - Security Engineering
+- Skill - Software Engineering Professionale
+- Skill - Technical Drawing Automation
+- Skill - Token Economy Engineering
+- Skill - UI UX Design System
+- Skill - Workflow Engine
+
+## Progetti trovati (26)
+- CFDBrain LLM
+- CFDML ENTERPRISE
+- CFDML Enterprise - Audit Completo Stato Reale (2026-05-12)
+- CFDML Enterprise - Sessione Digital Twin Enterprise (2026-05-12)
+- CFDML Enterprise Platform
+- CFDML Tech Stack
+- CFDML WSL Home Map & Organization (2026-05-12)
+- ClawFlows Workflow System
+- Deep Knowledge Patterns
+- FashionIntel OS
+- OpenClaw Standard Suite
+- OpenClaw — Stato Progetti
+- Progetto 2026
+- RT Box Dashboard Integration — UI & Pipeline Connections
+- RT Box Digital Twin — Motor Engineering Suite
+- RT Box Motor Training — PINN & Surrogate Modeling
+- Sistema Agenti Obsidian
+- Projects
+- AI Product Factory
+- Cost Token Profitability System
+- Enterprise Risk Register
+- MAX Command Center
+- Operating Model Software House
+- Software House OS
+- Spec Kit Software Creation Protocol
+- Software-house
+
+## Frasi chiave su valore e mercato
+- - **Business**: finops, messaggistica, monitoring
+- | basso | riassunti, formattazione, boilerplate | modello economico, contesto minimo |
+- - [[../synthesis/CFDML Enterprise Market Gap Roadmap]]: analisi profonda di cosa CFDML puo' fare oggi, gap rispetto al mercato CFD/CAE, rischi, claim policy e piano di miglioramento.
+- - **Documentazione/business/media molto ampia in root** (molti `.odt/.pdf/.mp4/.png`).
+- - `/home/tarik/CFDML_ORGANIZATION/01_Enterprise/{Marketing,Business,Reports}`
+- Sistema AI-first di business intelligence per retail fashion. Aggrega dati da POS (Shopify/WooCommerce), meteo, social trend e fornisce previsioni domanda, pricing dinamico e analisi sentiment tramite
+- - define problem, metric and business value before modeling;
+- - document safety impact and business continuity.
+- - [[Skill - Industrial Robotics]] — Robotica industriale
+- ## Skill - Product Business Profitability
+- **Source:** wiki\skills\Skill - Product Business Profitability.md
+- --- title: "Skill - Product Business Profitability" type: skill date: 2026-05-06 tags:
+- Quando serve aumentare il valore per token nelle sessioni lunghe senza sacrificare qualita.
+- Un prodotto AI procede solo se esistono: metrica di valore, rischio dichiarato, costo stimato, criterio di successo e piano di verifica.
+- 1. Product: problema, cliente, valore, metrica economica.
+- --- title: "Software-house" tags: [software-house, business, operations] type: index date: 2026-06-13
