@@ -566,7 +566,6 @@ window.__DICT.en = {
  "t4.p": "PLC-HMI, industrial networks, machine vision, robotics, pneumatics, drives and business innovation.",
  "t5.h": "3D design and robotic systems",
  "t5.p": "Mechanical modeling, wiring, protocols, diagnostics and functional testing of automated plants.",
- "cert.1.h": "EQF 6 · OT cybersecurity",
  "cert.2.h": "Robotics EQF 4",
  "cert.2.s": "CEAR Brescia · anthropomorphic",
  "cert.3.s": "CAD · release workflows",

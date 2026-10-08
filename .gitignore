@@ -9,3 +9,18 @@ reference/
 *.log
 .claude/
 .playwright-mcp/
+
+# Private material: never publish (the repository is public)
+wiki_*.md
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+*.sqlite
+*.db
+*.bak
+index.html.backup*
+server.log

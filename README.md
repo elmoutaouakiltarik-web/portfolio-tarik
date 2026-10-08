@@ -92,5 +92,5 @@ Dopo la pubblicazione:
 
 ## Note di manutenzione
 
-- Le vecchie versioni del sito (`index.html.backup-*`), gli script di migrazione, la cartella `images/` e i frammenti `sections*/` sono stati rimossi dalla radice: non servono al sito e restano consultabili nella cronologia git.
-- I file `wiki_*.md` nella radice sono esportazioni della knowledge base personale e **non servono al sito**. Contengono appunti interni: se il repository è pubblico o servito dalla radice (GitHub Pages), vengono pubblicati insieme al sito. Decidi se eliminarli o spostarli in un luogo privato (restano comunque nella cronologia git).
+- Le vecchie versioni del sito (`index.html.backup-*`), gli script di migrazione, la cartella `images/` e i frammenti `sections*/` sono stati rimossi dalla radice: non servono al sito.
+- **Riservatezza:** il repository è pubblico, quindi non vanno committati esportazioni della knowledge base (`wiki_*.md`), log, file `.env`, chiavi, appunti interni o percorsi del tuo computer: il `.gitignore` li esclude già. Se un file riservato viene pubblicato per errore, cancellarlo non basta (resta nella cronologia di git): cambia le credenziali coinvolte e riscrivi la cronologia oppure rendi privato il repository.

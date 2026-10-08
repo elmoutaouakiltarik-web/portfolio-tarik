@@ -566,7 +566,6 @@ window.__DICT.fr = {
  "t4.p": "PLC-IHM, réseaux industriels, vision artificielle, robotique, pneumatique, variateurs et innovation d’entreprise.",
  "t5.h": "Conception 3D et systèmes robotisés",
  "t5.p": "Modélisation mécanique, câblage, protocoles, diagnostic et recette fonctionnelle d’installations automatisées.",
- "cert.1.h": "EQF 6 · Cybersécurité OT",
  "cert.2.h": "Robotique EQF 4",
  "cert.2.s": "CEAR Brescia · anthropomorphes",
  "cert.3.s": "CAO · release workflows",
