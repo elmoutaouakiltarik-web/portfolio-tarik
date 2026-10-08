@@ -82,7 +82,7 @@ Dopo la pubblicazione:
   | `team` | 1516321318423-f06f85e504b3 |
   | `earth` | 1451187580459-43490279c0fa |
   | `drawings` | 1581092160562-40aa08e78837 |
-  | `retail` | file `fashionintel-os.jpg` della vecchia cartella `images/` (ID non registrato) |
+  | `retail` | file `fashionintel-os.jpg` della vecchia cartella `images/` (ID Unsplash non registrato; la cartella è stata rimossa ma resta nella cronologia git) |
 
   Le altre immagini in `assets/img/` (`ot-machine`, `it-datacenter`, `onprem-network`, `finops-dashboard`) derivano dai file Unsplash 1581091226825, 1573164713988, 1544197150 e 1551288049.
 - **Illustrazioni tecniche** (profilo alare con flusso potenziale, griglia body-fitted, sezione PMSM, knowledge graph, matrice di dipendenze, DAG degli agenti…): generate da codice, nessuna licenza esterna.
@@ -90,4 +90,5 @@ Dopo la pubblicazione:
 
 ## Note di manutenzione
 
-- Le cartelle `images/`, i file `index.html.backup-*`, `wiki_*.md`, `sections*/` e gli script `*.js` nella radice sono materiale delle versioni precedenti: **non servono al sito** e possono essere rimossi. I file `wiki_*.md` contengono appunti personali: se il repository è pubblico, valuta di non pubblicarli.
+- Le vecchie versioni del sito (`index.html.backup-*`), gli script di migrazione, la cartella `images/` e i frammenti `sections*/` sono stati rimossi dalla radice: non servono al sito e restano consultabili nella cronologia git.
+- I file `wiki_*.md` nella radice sono esportazioni della knowledge base personale e **non servono al sito**. Contengono appunti interni: se il repository è pubblico o servito dalla radice (GitHub Pages), vengono pubblicati insieme al sito. Decidi se eliminarli o spostarli in un luogo privato (restano comunque nella cronologia git).
