@@ -3,6 +3,8 @@
 Sito statico (HTML + CSS + JavaScript senza dipendenze e senza build), pensato per essere veloce, accessibile e facile da modificare.
 Si apre anche con un doppio clic su `index.html`.
 
+**Sito online:** https://elmoutaouakiltarik-web.github.io/portfolio-tarik/ (GitHub Pages, ramo `master`, cartella radice; ogni aggiornamento di `master` va online da solo in circa un minuto).
+
 - **Lingue:** italiano (sorgente), inglese, francese — cambio lingua istantaneo, scelta ricordata.
 - **Prestazioni:** ~220 KB totali al primo caricamento su telefono (con compressione del server), font self-hosted, nessuna richiesta a terze parti, animazioni di pagina solo `transform`/`opacity` (unica eccezione: il tratteggio che scorre nel disegno del PLC quando ci passi sopra con il mouse), sfondo WebGL che parte dopo il primo paint e si ferma da solo quando serve.
 - **Accessibilità:** audit automatico axe-core a zero violazioni (WCAG 2.1 AA) a 390, 768 e 1440 px in IT/EN/FR; navigazione da tastiera, `skip link`, menu mobile con focus trap, tab ARIA, `prefers-reduced-motion`.
@@ -13,6 +15,7 @@ Si apre anche con un doppio clic su `index.html`.
 
 ```
 index.html                 pagina (testi in italiano, chiavi data-i18n per le traduzioni) e sprite delle icone
+.nojekyll                  file vuoto: GitHub Pages pubblica i file così come sono, senza passare da Jekyll
 assets/css/main.css        stile (token, componenti, responsive, stampa)
 assets/js/main.js          interazioni (menu, scroll spy, reveal, tab, carousel, form, audio)
 assets/js/flow.js          sfondo WebGL "flow field" (si adatta al dispositivo)
@@ -60,13 +63,13 @@ La chiave Web3Forms è pensata per essere pubblica. Il campo honeypot `_honeypot
 
 | Dove | Come |
 | --- | --- |
-| **GitHub Pages** | Settings → Pages → *Deploy from a branch* → `main` / root |
+| **GitHub Pages** | Settings → Pages → *Deploy from a branch* → `master` / root (già attivo per questo repository) |
 | **Netlify** | trascina la cartella su [app.netlify.com/drop](https://app.netlify.com/drop) |
 | **Cloudflare Pages / Vercel** | collega il repository, nessun comando di build, cartella di output `/` |
 
 Dopo la pubblicazione:
 
-- **Anteprima social (Open Graph):** i social richiedono URL assoluti. In `index.html`, nei meta `og:image` e `twitter:image`, sostituisci `assets/img/og-image.png` con l'indirizzo completo, ad esempio `https://tuodominio.it/assets/img/og-image.png`, e aggiungi `<link rel="canonical" href="https://tuodominio.it/">`.
+- **Anteprima social (Open Graph) e indirizzo canonico:** sono già impostati sull'indirizzo di GitHub Pages (`link rel="canonical"`, `og:url`, `og:image`, `twitter:image` e `url` nei dati strutturati in `index.html`). Se passi a un dominio personalizzato, sostituisci `https://elmoutaouakiltarik-web.github.io/portfolio-tarik/` con il nuovo indirizzo in quei punti.
 - Aggiungi un `sitemap.xml` se vuoi (una sola pagina: basta l'URL della home).
 
 ## Crediti e licenze
