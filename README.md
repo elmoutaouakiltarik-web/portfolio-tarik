@@ -4,7 +4,7 @@ Sito statico (HTML + CSS + JavaScript senza dipendenze e senza build), pensato p
 Si apre anche con un doppio clic su `index.html`.
 
 - **Lingue:** italiano (sorgente), inglese, francese — cambio lingua istantaneo, scelta ricordata.
-- **Prestazioni:** ~210 KB totali al primo caricamento (con compressione del server), font self-hosted, nessuna richiesta a terze parti, animazioni solo `transform`/`opacity`, sfondo WebGL che parte dopo il primo paint e si ferma da solo quando serve.
+- **Prestazioni:** ~220 KB totali al primo caricamento su telefono (con compressione del server), font self-hosted, nessuna richiesta a terze parti, animazioni di pagina solo `transform`/`opacity` (unica eccezione: il tratteggio che scorre nel disegno del PLC quando ci passi sopra con il mouse), sfondo WebGL che parte dopo il primo paint e si ferma da solo quando serve.
 - **Accessibilità:** audit automatico axe-core a zero violazioni (WCAG 2.1 AA) a 390, 768 e 1440 px in IT/EN/FR; navigazione da tastiera, `skip link`, menu mobile con focus trap, tab ARIA, `prefers-reduced-motion`.
 - **Telefono:** le serie di card diventano strisce scorrevoli con `scroll-snap` (pagina ~30% più corta).
 - **Stampa / PDF:** il pulsante "Salva il profilo in PDF" produce un CV compatto di ~7 pagine A4 (fondo chiaro, senza decorazioni).
@@ -12,7 +12,7 @@ Si apre anche con un doppio clic su `index.html`.
 ## Struttura
 
 ```
-index.html                 pagina (testi in italiano, chiavi data-i18n per le traduzioni)
+index.html                 pagina (testi in italiano, chiavi data-i18n per le traduzioni) e sprite delle icone
 assets/css/main.css        stile (token, componenti, responsive, stampa)
 assets/js/main.js          interazioni (menu, scroll spy, reveal, tab, carousel, form, audio)
 assets/js/flow.js          sfondo WebGL "flow field" (si adatta al dispositivo)
@@ -42,7 +42,8 @@ python3 -m http.server 8080      # poi apri http://localhost:8080
    node tools/check-html.js     # id duplicati, link rotti, immagini senza alt
    ```
 4. **Sigla «AI» nei titoli:** in Bricolage Grotesque la «I» maiuscola e la «l» minuscola sono identiche, e «AI» si legge «Al». Per questo ogni «AI» (e «IA» in francese) è racchiusa in `<span class="ai">…</span>`: nei titoli il CSS usa il font di testo, dove la «l» ha un'asticella. Se aggiungi nuovi titoli con «AI», riusa lo stesso span.
-5. **Numeri e claim:** i numeri in evidenza (solver, endpoint, R², latenza…) sono in `index.html`; aggiornali quando i progetti cambiano.
+5. **Icone:** sono simboli SVG duotone disegnati su misura, in cima a `index.html` (`<symbol id="i-nome">`). Si usano con `<svg class="ico" width="20" height="20" aria-hidden="true"><use href="#i-nome"/></svg>`: il tratto principale prende `currentColor`, i tratti secondari la variabile `--ico-2` (nei riquadri `.domain__ico` è una tinta più chiara dell'accento).
+6. **Numeri e claim:** i numeri in evidenza (solver, endpoint, R², latenza…) sono in `index.html`; aggiornali quando i progetti cambiano.
 
 ## Form di contatto
 
@@ -85,7 +86,8 @@ Dopo la pubblicazione:
   | `retail` | file `fashionintel-os.jpg` della vecchia cartella `images/` (ID Unsplash non registrato; la cartella è stata rimossa ma resta nella cronologia git) |
 
   Le altre immagini in `assets/img/` (`ot-machine`, `it-datacenter`, `onprem-network`, `finops-dashboard`) derivano dai file Unsplash 1581091226825, 1573164713988, 1544197150 e 1551288049.
-- **Illustrazioni tecniche** (profilo alare con flusso potenziale, griglia body-fitted, sezione PMSM, knowledge graph, matrice di dipendenze, DAG degli agenti…): generate da codice, nessuna licenza esterna.
+- **Illustrazioni tecniche** (profilo alare con flusso potenziale, griglia body-fitted, sezione PMSM, knowledge graph, matrice di dipendenze, DAG degli agenti, ladder PLC, zone e condotti IEC 62443, pipeline CI/CD con metriche DORA…): generate da codice, nessuna licenza esterna.
+- **Icone:** set di 49 simboli SVG duotone disegnati per questo sito (nessuna libreria di icone, nessuna licenza esterna).
 - **Strumenti open-source citati** nella sezione *Ecosistema* (Supertonic, Supervision, build123d, Spec Kit, Agent Reach, PDFCraft, LiteLLM, Ollama…): il merito resta ai progetti originali; verifica che i nomi e le licenze indicate corrispondano a ciò che usi davvero.
 
 ## Note di manutenzione
