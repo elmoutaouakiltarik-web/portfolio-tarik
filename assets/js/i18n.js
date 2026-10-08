@@ -128,7 +128,6 @@ var DICT = window.__DICT = {
   }
 
   function init() {
-    capture();
     document.addEventListener('click', function (e) {
       var btn = e.target.closest && e.target.closest('[data-lang]');
       if (btn) { e.preventDefault(); set(btn.getAttribute('data-lang')); }
@@ -142,7 +141,8 @@ var DICT = window.__DICT = {
     var initial = fromUrl() || readStore() || 'it';
     if (SUPPORTED.indexOf(initial) === -1) initial = 'it';
     if (fromUrl()) writeStore(initial);
-    load(initial, function () { apply(initial); });
+    // the markup already is the Italian source: only touch the DOM when another language is requested
+    if (initial !== 'it') load(initial, function () { apply(initial); });
   }
 
   window.I18N = { t: t, lang: function () { return current; }, set: set, supported: SUPPORTED };

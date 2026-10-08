@@ -30,7 +30,7 @@
     if (bar) bar.style.transform = 'scaleX(' + Math.min(1, y / maxScroll).toFixed(4) + ')';
   }
   function onScroll() { if (!ticking) { ticking = true; window.requestAnimationFrame(paintScroll); } }
-  measure(); paintScroll();
+  window.requestAnimationFrame(function () { measure(); paintScroll(); });
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', function () { measure(); onScroll(); }, { passive: true });
   window.addEventListener('load', function () { measure(); onScroll(); });
@@ -78,7 +78,7 @@
   var spyLinks = $$('.nav__links a[data-nav], .menu a[data-nav]');
   var desktopIds = {};
   $$('.nav__links a[data-nav]').forEach(function (a) { desktopIds[a.getAttribute('data-nav')] = true; });
-  var GROUP = { stack: 'expertise' };
+  var GROUP = { stack: 'expertise', sectors: 'proof' };
   function setActive(id) {
     spyLinks.forEach(function (a) {
       var target = a.getAttribute('data-nav');
@@ -105,6 +105,7 @@
   } else {
     revealEls.forEach(function (el) { el.classList.add('is-in'); });
   }
+  root.classList.add('js-ready'); // tells the head script that scripting works, so content may stay gated behind .reveal
   window.addEventListener('beforeprint', function () { revealEls.forEach(function (el) { el.classList.add('is-in'); }); });
 
   /* ---- counters ---------------------------------------------------------------------- */
@@ -155,6 +156,49 @@
     });
     select(0);
   });
+
+  /* ---- carousels: on phones the card strips scroll sideways (CSS scroll-snap); add keyboard access + position dots ---- */
+  var narrow = window.matchMedia('(max-width: 760px)');
+  var whenIdle = function (fn) { if ('requestIdleCallback' in window) window.requestIdleCallback(fn, { timeout: 1500 }); else window.setTimeout(fn, 250); };
+  whenIdle(function () { $$('[data-carousel]').forEach(function (car) {
+    var dots = doc.createElement('div');
+    dots.className = 'carousel__dots'; dots.setAttribute('aria-hidden', 'true');
+    for (var i = 0; i < car.children.length; i++) dots.appendChild(doc.createElement('i'));
+    car.parentNode.insertBefore(dots, car.nextSibling);
+    var kids = dots.children, cur = -1, queued = false;
+    function sync() {
+      queued = false;
+      if (!narrow.matches || !car.children.length) return;
+      var first = car.children[0];
+      var step = (car.children[1] ? car.children[1].offsetLeft - first.offsetLeft : first.offsetWidth) || 1;
+      var atEnd = car.scrollWidth - car.clientWidth > 0 && car.scrollLeft >= car.scrollWidth - car.clientWidth - 2;
+      var idx = atEnd ? car.children.length - 1 : Math.round(car.scrollLeft / step);
+      if (idx === cur) return;
+      cur = idx;
+      for (var k = 0; k < kids.length; k++) kids[k].classList.toggle('is-on', k === idx);
+    }
+    function label() {
+      var prev = car.previousElementSibling, h = null;
+      if (prev) h = prev.matches('h2, h3, h4') ? prev : prev.querySelector('h2, h3, h4');
+      if (!h) h = (car.closest('section') || doc).querySelector('h2');
+      return h ? h.textContent.trim() : '';
+    }
+    function a11y() {
+      var isList = car.tagName === 'UL' || car.tagName === 'OL'; // lists keep their own role so the <li> children stay valid
+      if (narrow.matches && car.scrollWidth > car.clientWidth + 2) {
+        car.setAttribute('tabindex', '0'); car.setAttribute('aria-label', label());
+        if (!isList) car.setAttribute('role', 'group');
+      } else {
+        car.removeAttribute('tabindex'); car.removeAttribute('aria-label');
+        if (!isList) car.removeAttribute('role');
+      }
+      cur = -1; sync();
+    }
+    car.addEventListener('scroll', function () { if (!queued) { queued = true; window.requestAnimationFrame(sync); } }, { passive: true });
+    narrow.addEventListener('change', a11y);
+    doc.addEventListener('i18n:change', a11y);
+    a11y();
+  }); });
 
   /* ---- typewriters (hero role + terminal), only while the hero is on screen --------------- */
   var heroVisible = true;
