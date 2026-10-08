@@ -93,6 +93,8 @@ strong, b { font-weight: 700; color: var(--text); }
 em, i { font-style: normal; }
 h1, h2, h3, h4 { font-family: var(--font-display); color: var(--text); font-weight: 700; line-height: 1.1; letter-spacing: -0.03em; text-wrap: balance; }
 p { text-wrap: pretty; }
+h1 .ai, h2 .ai, h3 .ai, h4 .ai { font-family: var(--font-body); letter-spacing: -0.01em; }
+.hero h1 .ai { color: var(--cyan); }
 ::selection { background: rgba(52, 231, 255, 0.28); color: #fff; }
 :focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 6px; }
 main:focus { outline: none; }

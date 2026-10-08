@@ -41,7 +41,8 @@ python3 -m http.server 8080      # poi apri http://localhost:8080
    node tools/check-i18n.js     # chiavi mancanti, chiavi inutilizzate, punteggiatura francese
    node tools/check-html.js     # id duplicati, link rotti, immagini senza alt
    ```
-4. **Numeri e claim:** i numeri in evidenza (solver, endpoint, R², latenza…) sono in `index.html`; aggiornali quando i progetti cambiano.
+4. **Sigla «AI» nei titoli:** in Bricolage Grotesque la «I» maiuscola e la «l» minuscola sono identiche, e «AI» si legge «Al». Per questo ogni «AI» (e «IA» in francese) è racchiusa in `<span class="ai">…</span>`: nei titoli il CSS usa il font di testo, dove la «l» ha un'asticella. Se aggiungi nuovi titoli con «AI», riusa lo stesso span.
+5. **Numeri e claim:** i numeri in evidenza (solver, endpoint, R², latenza…) sono in `index.html`; aggiornali quando i progetti cambiano.
 
 ## Form di contatto
 
