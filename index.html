@@ -23,13 +23,13 @@
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <link rel="preload" href="assets/fonts/hanken-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/main.css?v=20261116c">
+<link rel="stylesheet" href="assets/css/main.css?v=20261116d">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Tarik El Moutaouakil","jobTitle":"Industrial AI & Agentic Systems Engineer","address":{"@type":"PostalAddress","addressLocality":"Reggio Emilia","addressCountry":"IT"},"url":"https://elmoutaouakiltarik-web.github.io/portfolio-tarik/","image":"https://elmoutaouakiltarik-web.github.io/portfolio-tarik/assets/img/tarik-480.webp","sameAs":["https://github.com/elmoutaouakiltarik-web","https://www.linkedin.com/in/tarik-el-moutaouakil-a832123b3"],"knowsLanguage":["it","ar","en","fr"]}
 </script>
-<script src="assets/js/i18n.js?v=20261116c" defer></script>
-<script src="assets/js/charts.js?v=20261116c" defer></script>
-<script src="assets/js/three-d.js?v=20261116c" defer></script>
+<script src="assets/js/i18n.js?v=20261116d" defer></script>
+<script src="assets/js/charts.js?v=20261116d" defer></script>
+<script src="assets/js/three-d.js?v=20261116d" defer></script>
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="a11y.skip">Vai al contenuto</a>
@@ -187,6 +187,18 @@
     <div class="case__body">
       <p data-i18n="chg.p1">Registro esatto delle sessioni di ricarica per stazioni DC industriali: ricostruisce le sessioni dal bus CAN e le scrive in un journal a catena di hash (SHA-256, HMAC, marca temporale RFC 3161) che rende visibile ogni manomissione. Esporta in OCPP 2.0.1 e OCPI, con KPI di flotta. Testato con ASan/UBSan e fuzzing.</p>
       <p class="callout" data-i18n="chg.xerj">XERJ, motore di ricerca AI e server MCP in Rust con oltre 19.000 stelle su GitHub, ha scelto charger_monitor come corpus di riferimento per gli agenti di coding e mi accredita sul suo hub: <a href="https://hub.xerj.org/contributors/elmoutaouakiltarik-web" rel="noopener">hub.xerj.org ↗</a></p>
+    </div>
+  </article>
+
+  <article class="case">
+    <div class="case__meta">
+      <h3>CFDML Enterprise</h3>
+      <p class="tags" data-i18n="cfdml.tags">Python · FastAPI · PyTorch · Julia · OpenFOAM · WSL2 · codice privato</p>
+    </div>
+    <div class="case__body">
+      <p data-i18n="cfdml.p1">Piattaforma CFD e machine learning che gira interamente su Linux in WSL2: API FastAPI con 173 route e autenticazione JWT, dashboard Streamlit e un assistente LLM locale tramite Ollama. Il registro contiene 54 solver scritti da me (incomprimibile 2D e 3D, spettrale, volumi finiti compressibili HLLC, multifase VOF, Lattice Boltzmann, SPH, interazione fluido-struttura, combustione, mezzi porosi, aeroacustica, turbomacchine, FEA strutturale e altri), affiancati da surrogati PINN, ponti verso OpenFOAM e Julia e tracciamento degli addestramenti con MLflow.</p>
+      <p data-i18n="cfdml.p2">Lo stesso codice va dal portatile al cluster: rileva CPU, RAM, GPU e ambiente WSL della macchina, sceglie il backend di calcolo e può inviare i job a Slurm, PBS, LSF o Kubernetes, con script pronti per nodi multi-GPU, oppure a GPU in cloud. Ultima validazione su un portatile Intel i7-1065G7 senza GPU: 5 casi su 5 superati e 18 solver eseguiti su 18.</p>
+      <p class="callout" data-i18n="cfdml.note">Il report di validazione dice da sé cosa prova: le micro-esecuzioni dimostrano che i solver girano, non ancora l’accuratezza di livello industriale, e gli script HPC non sono stati ancora lanciati su un cluster reale. È il prossimo passo.</p>
     </div>
   </article>
 

@@ -306,7 +306,7 @@
       e.preventDefault(); root.classList.add('no-3d'); stage.hidden = true; map.hidden = false;
     });
 
-    fetch('assets/data/burgers-u.bin?v=20261116c').then(function (r) {
+    fetch('assets/data/burgers-u.bin?v=20261116d').then(function (r) {
       if (!r.ok) throw new Error(r.status);
       return r.arrayBuffer();
     }).then(function (buf) {
