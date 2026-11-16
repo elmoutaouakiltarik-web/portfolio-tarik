@@ -23,12 +23,13 @@
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <link rel="preload" href="assets/fonts/hanken-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/main.css?v=20261116">
+<link rel="stylesheet" href="assets/css/main.css?v=20261116c">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Tarik El Moutaouakil","jobTitle":"Industrial AI & Agentic Systems Engineer","address":{"@type":"PostalAddress","addressLocality":"Reggio Emilia","addressCountry":"IT"},"url":"https://elmoutaouakiltarik-web.github.io/portfolio-tarik/","image":"https://elmoutaouakiltarik-web.github.io/portfolio-tarik/assets/img/tarik-480.webp","sameAs":["https://github.com/elmoutaouakiltarik-web","https://www.linkedin.com/in/tarik-el-moutaouakil-a832123b3"],"knowsLanguage":["it","ar","en","fr"]}
 </script>
-<script src="assets/js/i18n.js?v=20261116" defer></script>
-<script src="assets/js/charts.js?v=20261116" defer></script>
+<script src="assets/js/i18n.js?v=20261116c" defer></script>
+<script src="assets/js/charts.js?v=20261116c" defer></script>
+<script src="assets/js/three-d.js?v=20261116c" defer></script>
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="a11y.skip">Vai al contenuto</a>
@@ -72,6 +73,23 @@
 
 <section class="wrap field">
   <figure class="field__fig">
+    <div class="field3d" hidden>
+      <div class="field3d__bar">
+        <div class="seg" role="group" aria-label="Vista" data-i18n-attr="aria-label:field.view">
+          <button type="button" data-view="3d" aria-pressed="true">3D</button>
+          <button type="button" data-view="map" aria-pressed="false" data-i18n="field.map">Mappa</button>
+        </div>
+        <label class="field3d__ctl"><span data-i18n="field.slice">Sezione</span>
+          <input class="field3d__range" type="range" min="0" max="240" step="1" value="120" aria-label="Istante della sezione" data-i18n-attr="aria-label:field.slice_aria">
+          <output class="field3d__out">t = 0,50</output></label>
+      </div>
+      <div class="field3d__stage" tabindex="0" role="img" aria-label="Superficie 3D di u(x, t): il profilo sinusoidale iniziale si irripidisce fino a un gradino in x = 0, dove u salta da +1 a −1; la linea scura segna la sezione scelta, il suo profilo è riportato tratteggiato sulla parete di fondo." data-i18n-attr="aria-label:field.aria3d" hidden>
+        <canvas class="field3d__back" aria-hidden="true"></canvas>
+        <canvas class="field3d__gl" aria-hidden="true"></canvas>
+        <canvas class="field3d__front" aria-hidden="true"></canvas>
+        <p class="field3d__hint" data-i18n="field.hint">Trascina per ruotare · frecce da tastiera · doppio clic per tornare alla vista iniziale</p>
+      </div>
+    </div>
     <div class="field__grid">
       <span class="field__y field__y--top" aria-hidden="true">x = 1</span>
       <span class="field__y field__y--mid" aria-hidden="true">0</span>
@@ -200,6 +218,17 @@
       <figure class="chart chart--diagram">
         <figcaption><b data-i18n="exp.hil_t">Banco HIL: il firmware reale pilota un azionamento simulato in tempo reale</b></figcaption>
         <div class="plot" id="chart-hil" role="img" aria-label="Schema: la toolchain Python genera e carica il firmware sull’STM32G474; il microcontrollore invia la PWM a 100 kHz all’RT Box 3, che simula inverter e motore IPMSM da 30 kW e restituisce le misure." data-i18n-attr="aria-label:exp.hil_aria"></div>
+      </figure>
+      <figure class="chart clarke">
+        <figcaption><b data-i18n="exp.clarke_t">Clarke e Park: le tre correnti di fase viste come un unico vettore</b><span data-i18n="exp.clarke_c">Con ia + ib + ic = 0 il vettore delle correnti resta sul piano grigio e ruota a velocità elettrica. Clarke lo proietta sugli assi fissi α, β; Park lo legge negli assi d, q che ruotano con il rotore, dove diventa costante ed è regolabile con due PI. Valori illustrativi in per unità.</span></figcaption>
+        <div class="clarke__stage" tabindex="0" role="img" aria-label="Scena 3D: assi delle tre fasi a, b, c, il piano a + b + c = 0, il vettore corrente che ruota sul piano, gli assi fissi alfa e beta e gli assi rotanti d e q." data-i18n-attr="aria-label:exp.clarke_aria"><canvas aria-hidden="true"></canvas></div>
+        <div class="clarke__bar">
+          <p class="clarke__out" aria-live="off"></p>
+          <div class="clarke__btns">
+            <button type="button" class="mini" data-act="view">Vista dall’alto</button>
+            <button type="button" class="mini" data-act="play" aria-pressed="false">Pausa</button>
+          </div>
+        </div>
       </figure>
     </div>
   </article>

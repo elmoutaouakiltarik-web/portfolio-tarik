@@ -22,7 +22,11 @@ var DICT = window.__DICT = {
   "js.hil_pwm": "PWM 100 kHz",
   "js.hil_meas": "misure",
   "js.hil_flash": "carica il firmware",
-  "js.hil_cases": "8 casi di test HIL · bus 96 V"
+  "js.hil_cases": "8 casi di test HIL · bus 96 V",
+  "js.play": "Avvia",
+  "js.pause": "Pausa",
+  "js.view_top": "Vista dall’alto",
+  "js.view_tilt": "Vista inclinata"
  }
 };
 
@@ -87,7 +91,7 @@ var DICT = window.__DICT = {
   function load(lang) {
     if (lang === 'it' || DICT[lang]) { apply(lang); return; }
     var s = document.createElement('script');
-    s.src = 'assets/js/lang/' + lang + '.js?v=20261116';
+    s.src = 'assets/js/lang/' + lang + '.js?v=20261116c';
     s.onload = function () { apply(DICT[lang] ? lang : 'it'); };
     s.onerror = function () { apply('it'); };
     document.head.appendChild(s);
