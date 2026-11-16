@@ -1,12 +1,12 @@
 {
-  "name": "Tarik El Moutaouakil — Industrial AI Architect",
-  "short_name": "TEM",
-  "description": "Digital twin physics-driven, CFD-AI, OT/IT automation and local-first agentic systems.",
+  "name": "Tarik El Moutaouakil — Industrial AI & Agentic Systems Engineer",
+  "short_name": "Tarik EM",
+  "description": "Agentic LLM systems, physics-ML surrogates and HIL-validated control software.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#050813",
-  "theme_color": "#050813",
+  "background_color": "#fbfaf7",
+  "theme_color": "#fbfaf7",
   "icons": [
     { "src": "assets/img/icon-192.png", "sizes": "192x192", "type": "image/png" },
     { "src": "assets/img/icon-512.png", "sizes": "512x512", "type": "image/png" },
