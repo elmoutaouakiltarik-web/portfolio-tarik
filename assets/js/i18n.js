@@ -91,7 +91,7 @@ var DICT = window.__DICT = {
   function load(lang) {
     if (lang === 'it' || DICT[lang]) { apply(lang); return; }
     var s = document.createElement('script');
-    s.src = 'assets/js/lang/' + lang + '.js?v=20261116d';
+    s.src = 'assets/js/lang/' + lang + '.js?v=20261116e';
     s.onload = function () { apply(DICT[lang] ? lang : 'it'); };
     s.onerror = function () { apply('it'); };
     document.head.appendChild(s);

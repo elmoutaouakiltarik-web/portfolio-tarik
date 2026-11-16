@@ -23,13 +23,13 @@
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <link rel="preload" href="assets/fonts/hanken-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/main.css?v=20261116d">
+<link rel="stylesheet" href="assets/css/main.css?v=20261116e">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Tarik El Moutaouakil","jobTitle":"Industrial AI & Agentic Systems Engineer","address":{"@type":"PostalAddress","addressLocality":"Reggio Emilia","addressCountry":"IT"},"url":"https://elmoutaouakiltarik-web.github.io/portfolio-tarik/","image":"https://elmoutaouakiltarik-web.github.io/portfolio-tarik/assets/img/tarik-480.webp","sameAs":["https://github.com/elmoutaouakiltarik-web","https://www.linkedin.com/in/tarik-el-moutaouakil-a832123b3"],"knowsLanguage":["it","ar","en","fr"]}
 </script>
-<script src="assets/js/i18n.js?v=20261116d" defer></script>
-<script src="assets/js/charts.js?v=20261116d" defer></script>
-<script src="assets/js/three-d.js?v=20261116d" defer></script>
+<script src="assets/js/i18n.js?v=20261116e" defer></script>
+<script src="assets/js/charts.js?v=20261116e" defer></script>
+<script src="assets/js/three-d.js?v=20261116e" defer></script>
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="a11y.skip">Vai al contenuto</a>
@@ -198,6 +198,7 @@
     <div class="case__body">
       <p data-i18n="cfdml.p1">Piattaforma CFD e machine learning che gira interamente su Linux in WSL2: API FastAPI con 173 route e autenticazione JWT, dashboard Streamlit e un assistente LLM locale tramite Ollama. Il registro contiene 54 solver scritti da me (incomprimibile 2D e 3D, spettrale, volumi finiti compressibili HLLC, multifase VOF, Lattice Boltzmann, SPH, interazione fluido-struttura, combustione, mezzi porosi, aeroacustica, turbomacchine, FEA strutturale e altri), affiancati da surrogati PINN, ponti verso OpenFOAM e Julia e tracciamento degli addestramenti con MLflow.</p>
       <p data-i18n="cfdml.p2">Lo stesso codice va dal portatile al cluster: rileva CPU, RAM, GPU e ambiente WSL della macchina, sceglie il backend di calcolo e può inviare i job a Slurm, PBS, LSF o Kubernetes, con script pronti per nodi multi-GPU, oppure a GPU in cloud. Ultima validazione su un portatile Intel i7-1065G7 senza GPU: 5 casi su 5 superati e 18 solver eseguiti su 18.</p>
+      <p data-i18n="cfdml.p3">Il lato machine learning è codice mio: operatori neurali (FNO, DeepONet, U-FNO con canale SDF per geometrie arbitrarie, Geo-FNO), reti a grafo MeshGraphNet per mesh non strutturate, quantificazione dell’incertezza (MC Dropout, ensemble, conformal) con un controllo fuori distribuzione, un ciclo AutoML che riaddestra il modello sui nuovi risultati dei solver, apprendimento per rinforzo (PPO) per l’ottimizzazione di forma ed export verso NVIDIA Modulus. L’adattamento all’hardware è nel codice: un rilevatore misura CPU, RAM, GPU, CUDA, OpenCL e profilo energetico e ne ricava core, memoria e simulazioni parallele; i solver usano NumPy su CPU o CuPy su GPU con lo stesso codice. In totale circa 100.000 righe di Python e 43 file di test, più le varianti sperimentali (generativa, tubazioni, database fisico) archiviate a parte.</p>
       <p class="callout" data-i18n="cfdml.note">Il report di validazione dice da sé cosa prova: le micro-esecuzioni dimostrano che i solver girano, non ancora l’accuratezza di livello industriale, e gli script HPC non sono stati ancora lanciati su un cluster reale. È il prossimo passo.</p>
     </div>
   </article>
